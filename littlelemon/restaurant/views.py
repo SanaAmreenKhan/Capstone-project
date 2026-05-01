@@ -1,6 +1,4 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from django.shortcuts import render
 
-@api_view(['GET'])
-def hello_world(request):
-    return Response({"message": "Hello from Django API 🚀"})
+def index(request):
+    return render(request, 'index.html')
